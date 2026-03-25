@@ -14,18 +14,7 @@ Each patient has sEEG electrodes in different brain locations, making direct cro
 
 The result is three factor matrices describing *when* each pattern activates, *where* in the brain, and *which patients* show it.
 
----
 
-## Files
-
-| File | What it does |
-|---|---|
-| `cp_pipeline.py` | Full pipeline — sparsify, build tensor, normalise, decompose |
-| `visualize_cp.py` | Plots the results — run after the pipeline |
-| `diagnose.py` | Checks signal quality per patient (amplitude, NaN detection) |
-| `HOW_TO_RUN.md` | Run commands |
-
----
 
 ## Quick start
 
@@ -33,8 +22,6 @@ The result is three factor matrices describing *when* each pattern activates, *w
 cd "C:\path\to\your\data"
 python cp_pipeline.py --data_dir . --rank 7
 ```
-
----
 
 ## Pipeline steps
 
@@ -80,7 +67,6 @@ Two challenges solved:
 
 ### 5. Output
 Factor matrices saved to `cp_factors.npz` in your data folder.
-Run `visualize_cp.py` to generate plots.
 
 ---
 
@@ -108,5 +94,4 @@ Run `visualize_cp.py` to generate plots.
 | CP decomposition | [Kolda & Bader (2009)](https://doi.org/10.1137/07070111X) — SIAM Review |
 | Missing data | [Acar et al. (2011)](https://doi.org/10.1016/j.chemolab.2010.08.004) — Chemometrics |
 | Randomised sampling | [Vervliet & De Lathauwer (2016)](https://doi.org/10.1109/JSTSP.2015.2503260) — IEEE |
-| Rank selection | [Bro & Kiers (2003)](https://doi.org/10.1002/cem.801) — J. Chemometrics |
-| Robust statistics | [Rousseeuw & Leroy (1987)](https://doi.org/10.1002/0471725382) — Wiley |
+
